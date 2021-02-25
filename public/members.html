@@ -34,7 +34,7 @@
       <div class="container">
             <div class="row">
                   <div class="col-md-6 col-md-offset-3">
-                        <h2>Welcome! Let's learn something new! <span class="member-name"></span></h2>
+                        <h2>Welcome! Let's learn something new!<span class="member-name"></span></h2>
                   </div>
             </div>
       </div>
@@ -45,6 +45,7 @@
                         <input type="topic" class="form-control" id="topic" aria-describedby="topic">
                         <div id="topicDescription" class="form-text">Enter a topic this word is under. This should be
                               reused for other words that are part of this topic. </div>
+                              <!-- What they put here will correlate w/ category in database? -->
                   </div>
                   <div class="mb-3">
                         <label for="term" class="form-label">Term</label>
@@ -57,6 +58,7 @@
                         <div id="topicDescription" class="form-text">Enter the definition for the term. </div>
                   </div>
                   <button type="submit" class="btn btn-primary">Submit</button>
+                  <!-- When user hits submit, the term info is entered into database and stored with other cards of the same Topic - user can access their topic under the "Study Topics" Section below-->
             </form>
       </div>
       <div class="container">
@@ -64,48 +66,47 @@
             <p>Choose a topic to study</p>
             <div id="studyTopics">
                   <!--this needs to be populated by cards that have a category on them-->
+                  <!-- Need to have a button here to be able to access that topic's cards? -->
+                  <!-- Once they select the topic, they can view their cards in the quiz section -->
             </div>
       </div>
       <div class="container">
             <h2>Quiz</h2>
             <div class="flashCard">
-                  <!--this is where flashcards will go after they select a category, one wil be showed at a time, the card will flip on click, and then there will be three buttons, one to hear the word, so there will be an API call cor that, one button to say you got it right, it adds the word to a list on the right, and a button on the left for incorrect to add the word to a list on the left. -->
+                  <!--this is where flashcards will go after they select a category, one wil be showed at a time, the card will flip on click, and then there will be three buttons, one to hear the word, so there will be an API call for that, one button to say you got it right, it adds the word to a list on the right, and a button on the left for incorrect to add the word to a list on the left. -->
                   <div class="container-fluid d-flex justify-content-evenly">
                         <div>
                               <h4>Incorrect</h4>
                               <ul id="incorrectAnswers">
+                              <!-- List of incorrect cards go here? -->
 
                               </ul>
                         </div>
                         <div class="scene scene--card position-relative">
                               <div class="card">
-                                    <div class="card__face card__face--front">
-                                          front
-                                    </div>
-                                    <div class="card__face card__face--back">
-                                          back
-                                          <button
-                                                class="btn btn-primary position-absolute bottom-0 start-0">Correct</button>
-                                          <button
-                                                class="btn btn-danger position-absolute bottom-0 end-0">Incorrect</button>
+                                    <!-- Are these supposed to be front and back buttons?  -->
+                                    <div class="card__face card__face--front">front</div>
+                                    <div class="card__face card__face--back">back</div>
+                                    <button class="btn btn-primary bottom-0 start-0">Correct</button>
+                                    <button class="btn btn-danger bottom-0 end-0">Incorrect</button>
                                     </div>
                               </div>
                         </div>
                         <div>
                               <h4>Correct</h4>
                               <ul id="correctAnswers">
-
+                                    <!-- Words user clicked correct button on go here -->
                               </ul>
                         </div>
                   </div>
             </div>
       </div>
       <!-- /container -->
-      <footer class=" footer container-fluid mt-auto py-3 bg-dark position-absolute bottom-0">
+      <!-- <footer class=" footer container-fluid mt-auto py-3 bg-dark position-absolute bottom-0">
             <div class="container mp"></div>
             <p class="text-center"> copyright © Learn Something New App 2021</p>
             </div>
-      </footer>
+      </footer> -->
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
