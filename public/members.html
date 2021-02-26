@@ -19,7 +19,7 @@
       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
       <!-- Custom styles for this template -->
-      <link href="/css/style.css" rel="stylesheet">
+      <link href="/stylesheets/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -53,10 +53,10 @@
                   </div>
                   <div class="mb-3">
                         <label for="term" class="form-label">Definition</label>
-                        <input type="term" class="form-control" id="term" aria-describedby="topic">
+                        <input type="text" class="form-control" id="definition" aria-describedby="topic">
                         <div id="topicDescription" class="form-text">Enter the definition for the term. </div>
                   </div>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" id="createCard">Submit</button>
             </form>
       </div>
       <div class="container">
@@ -78,7 +78,7 @@
                               </ul>
                         </div>
                         <div class="scene scene--card position-relative">
-                              <div class="card">
+                              <div class="card" style="width:100%; height:100%;">
                                     <div class="card__face card__face--front">
                                           front
                                     </div>
